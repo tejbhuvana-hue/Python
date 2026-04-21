@@ -19,7 +19,7 @@ def withdraw():
         if acc.name == name:
             ammount = int(input("Enter ammount to withdraw:- "))
             acc.balance -= ammount
-            print(f"Your Withdrawal of {ammount} is succesfull, Now your balance is {balance}")
+            print(f"Your Withdrawal of {ammount} is succesfull, Now your balance is {acc.balance}")
         else:
             print("No account found")
 
@@ -29,7 +29,7 @@ def deposite():
         if acc.name.lower() == name.lower():
             ammount = int(input("Enter ammount to withdraw:- "))
             acc.balance += ammount
-            print(f"Your deposite of {ammount} is succesfull, Now your balance is {balance}")
+            print(f"Your deposite of {ammount} is succesfull, Now your balance is {acc.balance}")
         else:
             print("No account found")
 
