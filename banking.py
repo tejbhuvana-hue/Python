@@ -107,8 +107,7 @@ def show_all_accounts():
     else:
         for acc in accounts:
             print(f"Name: {acc.name}, Balance: {acc.balance}, Loan: {acc.loan}")
-
-
+            
 while True:
     print("1. Add Account")
     print("2. Withdraw")
