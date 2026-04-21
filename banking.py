@@ -18,7 +18,7 @@ def withdraw():
     for acc in accounts:
         if acc.name == name:
             ammount = int(input("Enter ammount to withdraw:- "))
-            balance = balance - ammount
+            acc.balance -= ammount
             print(f"Your Withdrawal of {ammount} is succesfull, Now your balance is {balance}")
         else:
             print("No account found")
@@ -28,7 +28,7 @@ def deposite():
     for acc in accounts:
         if acc.name.lower() == name.lower():
             ammount = int(input("Enter ammount to withdraw:- "))
-            balance = balance + ammount
+            acc.balance += ammount
             print(f"Your deposite of {ammount} is succesfull, Now your balance is {balance}")
         else:
             print("No account found")
@@ -100,6 +100,13 @@ def delete_account():
             print("Account deleted successfully")
             return
     print("Account not found")
+    
+def show_all_accounts():
+    if not accounts:
+        print("No accounts available")
+    else:
+        for acc in accounts:
+            print(f"Name: {acc.name}, Balance: {acc.balance}, Loan: {acc.loan}")
 
 
 while True:
@@ -134,6 +141,8 @@ while True:
     elif choice == 9:
         delete_account()
     elif choice == 10:
+        show_all_accounts()
+    elif choice == 11:
         break
     else:
         print("Invalid choice, please try again.")
