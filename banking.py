@@ -118,7 +118,9 @@ while True:
     print("6. Calculate Interest")
     print("7. Pay Loan")
     print("8. Transfer")
-    print("9. Exit")
+    print("9. Delete Account")
+    print("10. Show All Accounts")
+    print("11. Exit")
 
     choice = int(input("Enter your choice:- "))
 
